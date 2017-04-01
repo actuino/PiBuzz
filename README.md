@@ -10,6 +10,7 @@ We needed a simple way to interact with a Pi, and came up with these constraints
 
 * Minimal hardware
 * Integration in available Pi cases
+* Still allow to use the majority of Hats
 * Usable on Pi Zero
 * Allow for several commands
 * Provides some kind of feedback
@@ -25,7 +26,7 @@ Can't do simpler:
 
 Unleash your creativity!  
 Several agents can be used with this simple hardware.  
-We will soon release the first one, and more complex one will follow.  
+We will soon release the first one, and more complex agents will follow.  
 
 Tell us what you need!
 
