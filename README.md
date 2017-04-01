@@ -19,7 +19,7 @@ We needed a simple way to interact with a Pi, and came with these constraints:
 
 Can't do simpler:  
 * A push button
-* An Buzzer
+* A Buzzer
 
 ## The software
 
