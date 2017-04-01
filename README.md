@@ -6,7 +6,7 @@ A lightweight Raspberry Pi agent to control a buzzer and read a Button. Many app
 By default, a Raspberry lacks basic user interaction.  
 You can log over the network, add various shields, but some simple actions are out of reach.  
 
-We needed a simple way to interact with a Pi, and came with these constraints:
+We needed a simple way to interact with a Pi, and came up with these constraints:
 
 * Minimal hardware
 * Integration in available Pi cases
