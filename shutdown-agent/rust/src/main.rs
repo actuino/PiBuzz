@@ -13,6 +13,7 @@ use sysfs_gpio::{Direction, Pin};
 // https://github.com/rust-embedded/rust-sysfs-gpio/blob/master/examples/blinky.rs
 // https://github.com/rust-embedded/gpio-utils/blob/master/src/commands/gpio_write.rs
 
+
 fn main() {
     let buzzer_pin = Pin::new(40);
     buzzer_pin.with_exported(|| {
