@@ -13,6 +13,9 @@ use sysfs_gpio::{Direction, Pin};
 // https://github.com/rust-embedded/rust-sysfs-gpio/blob/master/examples/blinky.rs
 // https://github.com/rust-embedded/gpio-utils/blob/master/src/commands/gpio_write.rs
 
+// https://github.com/rust-embedded/gpio-utils/blob/master/src/main.rs
+// https://github.com/inre/cupi/blob/master/examples/button.rs
+
 
 fn main() {
     let buzzer_pin = Pin::new(40);
@@ -35,6 +38,4 @@ fn main() {
     println!("Hello, world!");
 }
 
-// https://github.com/inre/cupi/blob/master/examples/button.rs
 
-// https://github.com/rust-embedded/gpio-utils/blob/master/src/main.rs
