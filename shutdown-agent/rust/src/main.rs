@@ -2,13 +2,16 @@
 
 extern crate sysfs_gpio;
 use std::process::exit;
+// https://github.com/rust-embedded/rust-sysfs-gpio
 use sysfs_gpio::{Direction, Pin};
 //use std::time::Duration;
 //use std::thread::sleep;
 //use std::env;
 
-// https://gist.github.com/actuino/d88061db0ec118d8de2b6f9d0d84d1d6
-// https://github.com/rust-embedded/rust-sysfs-gpio
+
+// Raspberry Pi Zero Active Buzzer Test : https://gist.github.com/actuino/d88061db0ec118d8de2b6f9d0d84d1d6
+// https://github.com/rust-embedded/rust-sysfs-gpio/blob/master/examples/blinky.rs
+// https://github.com/rust-embedded/gpio-utils/blob/master/src/commands/gpio_write.rs
 
 fn main() {
     let buzzer_pin = Pin::new(40);
