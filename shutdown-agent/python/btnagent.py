@@ -27,7 +27,7 @@ _on_click = None
 _on_longclick = None
 
 def setup():
-	'''Initial setup of the hardwarte
+	'''Initial setup of the hardware
 	'''
 	GPIO.setmode(GPIO.BOARD) # Numbers GPIOs by physical location
 	GPIO.setup(BuzzerPin, GPIO.OUT)
@@ -47,6 +47,24 @@ def beep(x):
 	buzzer_on()
 	time.sleep(x)
 	buzzer_off()
+
+def bililip():
+	beep(0.02)
+	time.sleep(0.03)
+	beep(0.02)
+	time.sleep(0.03)
+	beep(0.1)
+	
+def play_morse(morse,duration=0.1):
+	for letter in morse:
+		if '.' == letter:
+			beep(duration)
+			time.sleep(duration)
+		elif '-' == letter:
+			beep(duration*2)
+			time.sleep(duration)
+		else:
+			time.sleep(duration*2)
 
 def loop():
 	'''Main blocking loop, 
@@ -75,7 +93,7 @@ def loop():
 			length=time.time()-Start
 		if State == 'c' and length>1:
 			State='L'
-		if State == 'L' and round(length*10)%10==0:
+		if State == 'L' and round(length*10)%10==1:
 			beep(0.03) 
 		time.sleep(0.1)
 
