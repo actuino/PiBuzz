@@ -46,6 +46,6 @@ def bililip(cmd):
 
 if __name__ == '__main__':
 	# Audio feedback listens on 8081 by default
-	# Send commands as json to /buzzer
+	# Send commands as json to /buzzer
 	httpserver.start('127.0.0.1',8081)
 	btnagent.loop()
