@@ -11,6 +11,7 @@ Audio feedback Webservice
 import btnagent
 import requests
 import httpserver
+from subprocess import call
 
 '''
 TODO: This will be moved to a config file.
@@ -36,8 +37,10 @@ def btn_long_click(duration):
 	print("Long Click",duration)
 	if duration == 1:
 		print "Should reboot"
+		call(['shutdown', '-r', 'now'], shell=False)
 	if duration == 2:
 		print "Shoud shutdown"
+		call(['shutdown', '-h', 'now'], shell=False)
 		
 @httpserver.buzzer_command()
 def bililip(cmd):
