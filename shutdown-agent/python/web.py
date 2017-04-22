@@ -11,6 +11,7 @@ Audio feedback Webservice
 import btnagent
 import requests
 import httpserver
+import json
 from subprocess import call
 
 '''
@@ -43,9 +44,13 @@ def btn_long_click(duration):
 		call(['shutdown', '-h', 'now'], shell=False)
 		
 @httpserver.buzzer_command()
-def bililip(cmd):
+def buzzer(cmd):
 	print "Got Buzzer Command",cmd
-	btnagent.play_morse('... --- ...',0.1);
+	dic = json.loads(cmd)
+	if dic["Command"] == "Beep":
+		btnagent.beep(dic["Time"])
+	else:
+		btnagent.play_morse('... --- ...',0.1);
 
 if __name__ == '__main__':
 	# Audio feedback listens on 8081 by default
